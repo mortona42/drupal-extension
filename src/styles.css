@@ -1,0 +1,12 @@
+.output-container,
+.output-container--release {
+    position: fixed;
+    bottom: 0;
+    background: black;
+    color: white;
+    padding: 1rem;
+}
+
+.output-container--release {
+    right: 0;
+}

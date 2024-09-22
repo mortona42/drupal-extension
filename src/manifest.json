@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "newextension",
+  "description": "New web extension",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "background": {
+    "scripts": ["background_script.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.drupal.org/*"],
+      "js": ["content_script.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_popup": "browserAction/index.html",
+    "default_title": "newextension"
+  },
+  "page_action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_popup": "pageAction/index.html",
+    "default_title": "newextension"
+  },
+  "permissions": ["*://updates.drupal.org/*"],
+  "options_ui": {
+    "page": "options/index.html"
+  }
+}
