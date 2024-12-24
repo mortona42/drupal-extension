@@ -1,3 +1,5 @@
-import moduleLinks from "./lib/addButton";
+import addModuleButton from "./lib/addModuleButton";
 
-moduleLinks();
+addModuleButton();
+
+console.log('yes');

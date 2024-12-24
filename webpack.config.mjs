@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 export default {
   mode: 'production',
   context: path.resolve(__dirname, './src'),
+  devtool: 'eval-source-map',
   plugins: [
     new WebExtPlugin({
       sourceDir: __dirname + '/dist',
