@@ -16,7 +16,6 @@ export default function addModuleButton() {
  * @param {HTMLLinkElement} link 
  */
 function addButton(link) {
-  console.log(link);
   const title = link.parentElement;
   if (!title.classList.contains('processed')) {
     title.classList.add('processed');
@@ -25,17 +24,11 @@ function addButton(link) {
     button.innerText = 'Add';
 
     const module = getModuleFromLink(link);
-    console.log(module);
     if (!projects.has(module)) {
       button.addEventListener('click', addToList);
       title.appendChild(button);
     }
-    else {
-      
-    }
-    
   }
-  // console.log(projects);
 }
 
 function getModuleFromLink(link) {
