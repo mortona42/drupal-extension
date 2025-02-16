@@ -1,4 +1,5 @@
-import projects from "./composerProjects";
+import projects from "./composerProjects.js";
+import installedVersion from "/home/andrew/Projects/web_extensions/newextension/data/installedVersions.json" assert {type: 'json'};
 
 const addModules = new Map();
 
@@ -24,8 +25,15 @@ function addButton(link) {
     button.innerText = 'Add';
 
     const module = getModuleFromLink(link);
+    console.log(module);
+    console.log(installedVersion[module])
     if (!projects.has(module)) {
       button.addEventListener('click', addToList);
+      title.appendChild(button);
+    }
+
+    else if (installedVersion[module]) {
+      button.innerText = installedVersion[module].installed;
       title.appendChild(button);
     }
   }

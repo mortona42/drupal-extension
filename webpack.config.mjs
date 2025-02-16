@@ -22,22 +22,22 @@ export default {
         {from: "./icons", to: "./icons"},
         {from: "./browserAction/*.css", to: "./"},
         {from: "./options/*.css", to: "./"},
-        {from: "./styles.css", to: "./"},
+        {from: "./content_styles.css", to: "./"},
       ]
     }),
     new HtmlWebpackPlugin({
       template: './browserAction/index.html',
-      filename: 'index.html',
+      filename: 'browser_action.html',
       chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       template: './options/index.html',
-      filename: 'index.html',
+      filename: 'options.html',
       chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       template: './pageAction/index.html',
-      filename: 'index.html',
+      filename: 'page_action.html',
       chunks: ['index'],
     }),
   ],
@@ -45,6 +45,7 @@ export default {
     content_script: './content_script.js',
     background_script: './background_script.js',
     browser_action: './browserAction/script.js',
+    page_action: './pageAction/script.js',
     options: './options/script.js',
   },
   output: {

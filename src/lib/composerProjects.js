@@ -1,7 +1,6 @@
 /**
  * Provides a list of projects in composer.json.
  */
-
 import composerJson from "/home/andrew/Sites/mantra/composer.json" assert {type: 'json'};
 
 const projects = new Set();

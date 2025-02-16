@@ -1,5 +1,5 @@
-import addModuleButton from "./lib/addModuleButton";
+import addModuleButton from "./lib/addModuleButton.js";
 
 addModuleButton();
 
-console.log('yes');
+console.log('why');
